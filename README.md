@@ -56,6 +56,7 @@ GROUP BY YEAR(OrderDate)
 ORDER BY OrderYear;
 
 ### 2. Total Sales by Region
+
 ```sql
 SELECT 
     Region,
@@ -65,6 +66,7 @@ GROUP BY Region
 ORDER BY TotalSales DESC;
 
 ### 3. Segment-Wise Profit and Sales
+
 ```sql
 SELECT 
     Segment,
@@ -74,6 +76,7 @@ FROM Orders
 GROUP BY Segment;
 
 ### 4. Top 5 Countries by Sales
+
 ```sql
 SELECT 
     Country,
@@ -84,6 +87,7 @@ ORDER BY TotalSales DESC
 LIMIT 5;
 
 ### 5. Profit Margin by Year
+
 ```sql
 SELECT 
     YEAR(OrderDate) AS OrderYear,
