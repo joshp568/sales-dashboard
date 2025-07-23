@@ -1,3 +1,4 @@
+
 # 📊 Superstore Sales & Profit Dashboard (Power BI + SQL)
 
 An interactive business dashboard built using Power BI and SQL that analyzes global sales and profit performance across regions, categories, and customer segments.
@@ -5,9 +6,9 @@ An interactive business dashboard built using Power BI and SQL that analyzes glo
 ---
 
 ## 🚀 Live Project  
-👉 [🔗 View Dashboard on GitHub Pages](https://joshp568.github.io/sales-dashboard/)  
-📄 [Download PDF Version](https://joshp568.github.io/sales-dashboard/SalesPerformance_Dashboard_final.pdf)  
-📁 [Download Power BI File (.pbix)](https://github.com/joshp568/sales-dashboard/raw/main/SalesPerformance_Dashboard.pbix)
+👉 [🔗 View Dashboard on GitHub Pages](https://github.com/joshp568/sales-dashboard)
+📄 [Download PDF Version](https://github.com/joshp568/sales-dashboard/blob/main/SalesPerformance_Dashboard_final.pdf)
+📁 [Download Power BI File (.pbix)](https://github.com/joshp568/sales-dashboard/blob/main/SalesPerformance_Dashboard.pbix)
 
 ---
 
@@ -46,6 +47,7 @@ An interactive business dashboard built using Power BI and SQL that analyzes glo
 Below are some of the key SQL queries used for preparing data before loading into Power BI:
 
 ### 1. Total Sales and Profit by Year
+
 ```sql
 SELECT 
     YEAR(OrderDate) AS OrderYear,
@@ -54,6 +56,7 @@ SELECT
 FROM Orders
 GROUP BY YEAR(OrderDate)
 ORDER BY OrderYear;
+````
 
 ### 2. Total Sales by Region
 
@@ -64,6 +67,7 @@ SELECT
 FROM Orders
 GROUP BY Region
 ORDER BY TotalSales DESC;
+```
 
 ### 3. Segment-Wise Profit and Sales
 
@@ -74,6 +78,7 @@ SELECT
     SUM(Profit) AS TotalProfit
 FROM Orders
 GROUP BY Segment;
+```
 
 ### 4. Top 5 Countries by Sales
 
@@ -85,6 +90,7 @@ FROM Orders
 GROUP BY Country
 ORDER BY TotalSales DESC
 LIMIT 5;
+```
 
 ### 5. Profit Margin by Year
 
@@ -94,23 +100,35 @@ SELECT
     SUM(Profit) / SUM(Sales) * 100 AS ProfitMargin
 FROM Orders
 GROUP BY YEAR(OrderDate);
+```
 
-📐 Sample DAX Measure (Power BI)
-DAX
+---
 
+## 📐 Sample DAX Measure (Power BI)
+
+```DAX
 Sales Growth YoY = 
 VAR PrevYear = CALCULATE(SUM(Orders[Sales]), DATEADD(Orders[OrderDate], -1, YEAR))
 RETURN DIVIDE(SUM(Orders[Sales]) - PrevYear, PrevYear, 0)
+```
 
-📌 Project Goals
-Transform raw transactional data into actionable insights
+---
 
-Practice data storytelling using KPI visuals
+## 📌 Project Goals
 
-Showcase SQL-Power BI integration for analytics jobs
+* Transform raw transactional data into actionable insights
+* Practice data storytelling using KPI visuals
+* Showcase SQL-Power BI integration for analytics jobs
 
-📬 Contact
+---
+
+## 📬 Contact
+
 If you liked this project or have feedback, feel free to connect:
-📧 LinkedIn Profile
+📧 [LinkedIn Profile](https://www.linkedin.com/in/joshua-pratheek-aluri-261a8b305/)
 
-© 2025 Joshua – Built using Power BI and SQL
+---
+
+© 2025 Joshua – Built  using Power BI and SQL
+
+```
