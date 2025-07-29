@@ -122,10 +122,11 @@ RETURN DIVIDE(SUM(Orders[Sales]) - PrevYear, PrevYear, 0)
 
 ---
 
-## 📬 Contact
+## 👨‍💻 Author
 
-If you liked this project or have feedback, feel free to connect:
-📧 [LinkedIn Profile](https://www.linkedin.com/in/joshua-pratheek-aluri-261a8b305/)
+**Joshua Pratheek**  
+_Data Analyst | Python | SQL | Excel | Power BI_  
+🔗 [LinkedIn](https://www.linkedin.com/in/joshua-pratheek-aluri-261a8b305/) · 🌐 [GitHub](https://github.com/joshp568)
 
 ---
 
